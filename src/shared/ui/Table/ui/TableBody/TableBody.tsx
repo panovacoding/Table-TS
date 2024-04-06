@@ -1,4 +1,4 @@
-import {Cells, TableConfig} from "../../types/type.ts";
+import { TableConfig} from "../../types/type.ts";
 
 interface TableData {
   [key: string]: any;
@@ -6,19 +6,19 @@ interface TableData {
 
 interface TableBodyProps<T> {
   data: T[];
-  config: TableConfig;
+  config: TableConfig<T>;
 }
 
 export const TableBody =  <T extends TableData>(props: TableBodyProps<T>) => {
   const { data, config } = props
 
-  const orderCell = config.cells.map((el: Cells) => el.data);
+  const orderCell = config?.cells.map((el) => el.data);
 
   return (
     <tbody>
-    {data.map((el, index) => (
+    {data?.map((el, index) => (
       <tr key={index}>
-        {orderCell.map((key, innerIndex) => (
+        {orderCell?.map((key, innerIndex) => (
           <td key={innerIndex}>{el[key]}</td>
         ))}
       </tr>

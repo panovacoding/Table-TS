@@ -9,7 +9,7 @@ interface TableData {
 }
 
 interface TableProps<T> {
-  config: TableConfig,
+  config: TableConfig<T>,
   data: T[]
 }
 
