@@ -12,6 +12,10 @@ export const TableConfigData: TableConfig<TableDataList> = {
       data: 'short',
     },
     {
+      name: '',
+      data: 'additional'
+    },
+    {
       name: 'Current Price',
       data: 'price',
     },
