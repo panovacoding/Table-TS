@@ -1,0 +1,15 @@
+.Table {
+  border: 1px solid white;
+  padding: 10px;
+  border-spacing: 0;
+
+  td, th {
+    text-align: left;
+    padding: 20px;
+  }
+
+  tr:nth-child(even) {
+    color: black;
+    background-color: rgba(75, 177, 239, 0.96);
+  }
+}
