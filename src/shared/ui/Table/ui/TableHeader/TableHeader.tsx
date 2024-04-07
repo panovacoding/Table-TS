@@ -9,7 +9,12 @@ export const TableHeader =<T,>(props: TableHeaderProps<T>) => {
 
   return (
     <thead>
-      {config?.cells.map(el => (<th className={cls.header_th}>{el.name}</th>))}
+      {config?.cells.map((el, index) => (
+        <th
+          key={index}
+          className={cls.header_th}
+          style={{backgroundColor: `${el?.bgColor}`, width: `${el?.width}`}}
+        >{el.name}</th>))}
     </thead>
   )
 }

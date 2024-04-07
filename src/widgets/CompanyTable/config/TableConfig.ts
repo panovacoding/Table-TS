@@ -6,6 +6,7 @@ export const TableConfigData: TableConfig<TableDataList> = {
     {
       name: 'Full Name',
       data: 'name',
+      width: '500px'
     },
     {
       name: 'Short Name',
