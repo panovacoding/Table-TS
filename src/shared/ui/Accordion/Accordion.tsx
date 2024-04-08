@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 
-import {IconDropDownArrow} from "../../../assets/Icons/IconDropDownArrow/index.jsx"
+import {IconDropDownArrow} from '@/assets/Icons/IconDropDownArrow/index.tsx'
 import style from './Accordion.module.scss'
 import {useState} from "react";
 import {Element} from "./Element";
