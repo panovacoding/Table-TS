@@ -29,14 +29,14 @@ export const Accordion = (props) => {
   const toggleOpened = () => setIsOpened(prevState => !prevState);
 
   return (
-    <div className={clsx(style.AccordionItem, wrapperClass, style[theme])}>
+    <div className={clsx(style.AccordionItem, wrapperClass, style[theme], isOpened && style.AccordionItemOpened)}>
 
       <div className={clsx(style.header, headerClass)} onClick={toggleOpened}>
         <span className={style.title}>{title}</span>
         <IconDropDownArrow className={clsx(style.icon, isOpened && style.arrow_rotate)}/>
       </div>
 
-      <div className={clsx(style.body, bodyClass, isOpened && style.isVisible)}>
+      <div className={clsx(style.body, bodyClass)}>
         {items?.map(({title, items, data, isAccordion}, index) => (
           <div key={index} className={style.item}>
             {isAccordion

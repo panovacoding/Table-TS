@@ -1,5 +1,9 @@
 .AccordionItem {
   width: 100%;
+
+  display: grid;
+  grid-template-rows: auto 0fr;
+  transition: grid-template-rows 0.3s;
 }
 
 .header {
@@ -12,6 +16,8 @@
   background-color: #262626;
   text-transform: uppercase;
   user-select: none;
+
+  height: fit-content;
 
 
   &:hover {
@@ -33,16 +39,11 @@
 
 .body {
   padding: 0;
-  height: 0;
   overflow: hidden;
-  transition: height 0.5s ease-in-out, padding 0.5s ease-in-out;
 }
 
-.isVisible {
-  padding: 23px;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
+.AccordionItemOpened {
+  grid-template-rows: auto 1fr;
 }
 
 .item {
