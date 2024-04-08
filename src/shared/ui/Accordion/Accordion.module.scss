@@ -1,0 +1,93 @@
+.AccordionItem {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 23px;
+
+  background-color: #262626;
+  text-transform: uppercase;
+  user-select: none;
+
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.2px;
+  letter-spacing: 0.02em;
+  color: #F6A723;
+}
+
+.arrow_rotate {
+  transform: rotateX(180deg);
+}
+
+.body {
+  padding: 0;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease-in-out, padding 0.5s ease-in-out;
+}
+
+.isVisible {
+  padding: 23px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.item_title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24.39px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  text-transform: uppercase;
+  color: #D9DCDC;
+
+}
+
+/**
+  тема для вложенных элементов
+ */
+
+.innerItemTheme {
+  .header {
+    padding: 0;
+    background-color: transparent;
+
+  }
+
+  .title {
+    font-size: 18px;
+    color: #D9DCDC;
+  }
+
+  .icon {
+    path {
+      stroke: white;
+    }
+  }
+
+  .item > span {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+  }
+}
