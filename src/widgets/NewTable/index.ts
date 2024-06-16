@@ -1,0 +1,1 @@
+export { NewTable } from "./ui/NewTable/NewTable";
